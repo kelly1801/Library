@@ -12,6 +12,7 @@
       src="https://kit.fontawesome.com/7453c59f9a.js"
       crossorigin="anonymous"
     ></script>
+    <script src="index.js"></script>
   </head>
 
   <body>
@@ -25,7 +26,26 @@
             <li><a href="#" class="nav__link">Contact</a></li>
             <li><a href="#" class="nav__link nav__link--primary">Books</a></li>
           </ul>
+          <button class="btn__menu" onclick="openMenu()">
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="menu__backdrop">
+            <button class="btn__menu btn__menu--close"  onclick="closeMenu()">
+              <i class="fas fa-times"></i>
+            </button>
+            <ul class="menu__links">
+              <li class="menu__list">
+                <a href="" class="menu__link"  onclick="closeMenu()">Home</a>
+              </li>
+              <li class="menu__list"><a href="" class="menu__link" onclick="closeMenu()">Books</a></li>
+              <li class="menu__list">
+                <a href="" class="menu__link" onclick="closeMenu()">Contacts</a>
+              </li>
+            </ul>
+          </div>
         </div>
+        
+        
       </nav>
 
       <header>
@@ -36,7 +56,9 @@
               Find your dream book with
               <span class="purple--text">Library</span>
             </h2>
-            <button class="btn">Browse books</button>
+            <a href="#features">
+              <button class="btn">Browse books</button>
+            </a>
           </div>
           <figure class="header__img--wrapper">
             <img src="./assets/Undraw_Books.svg" alt="" />
@@ -188,7 +210,6 @@
             </h2>
 
             <div class="books-container">
-
               <div class="book">
                 <figure class="book__img--wrapper">
                   <img class="book__img" src="./assets/book-1.jpeg" alt="" />
@@ -206,11 +227,12 @@
                 </div>
               </div>
 
-
               <div class="book">
                 <figure class="book__img--wrapper">
                   <img class="book__img" src="./assets/book-2.jpeg" alt="" />
-                  <figcaption class="book-title">Be obsessed or be average</figcaption>
+                  <figcaption class="book-title">
+                    Be obsessed or be average
+                  </figcaption>
                 </figure>
                 <div class="book__ratings">
                   <i class="fas fa-star"></i>
@@ -258,11 +280,12 @@
                 </div>
               </div>
 
-
               <div class="book">
                 <figure class="book__img--wrapper">
                   <img class="book__img" src="./assets/book-5.jpeg" alt="" />
-                  <figcaption class="book-title">The 4 laws of power</figcaption>
+                  <figcaption class="book-title">
+                    The 4 laws of power
+                  </figcaption>
                 </figure>
                 <div class="book__ratings">
                   <i class="fas fa-star"></i>
@@ -296,7 +319,9 @@
               <div class="book">
                 <figure class="book__img--wrapper">
                   <img class="book__img" src="./assets/book-7.jpg" alt="" />
-                  <figcaption class="book-title">Your next five moves</figcaption>
+                  <figcaption class="book-title">
+                    Your next five moves
+                  </figcaption>
                 </figure>
                 <div class="book__ratings">
                   <i class="fas fa-star"></i>
@@ -326,9 +351,6 @@
                   <span class="book__price--normal"> $59.95</span>$14.95
                 </div>
               </div>
-
-
-
             </div>
           </div>
         </div>
@@ -347,17 +369,16 @@
     <footer>
       <div class="container">
         <div class="row">
-          
-          <img src="./assets/Library.svg" alt="" class="logo">
-          
+          <img src="./assets/Library.svg" alt="" class="logo" />
+
           <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Books</li>
-              <li>Contact</li>
-            </ul>
-          
-            <span>Copyright 2021 Library</span>
+            <li>Home</li>
+            <li>About</li>
+            <li>Books</li>
+            <li>Contact</li>
+          </ul>
+
+          <span>Copyright &copy; 2021 Library</span>
         </div>
       </div>
     </footer>
